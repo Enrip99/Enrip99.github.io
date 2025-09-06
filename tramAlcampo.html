@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="Propers">Error</p>
+
+    <script>
+        document.getElementById("Propers").innerHTML = "Et prometo que estic carregant.";
+        estacio = fetch("https://tram-web-service.tram.cat/api/opendata/stopTimes?outboundCode=2030&returnCode=2130").then((ret) => {
+            console.log(ret);
+        });
+        baptista = fetch("https://tram-web-service.tram.cat/api/opendata/stopTimes?outboundCode=2014&returnCode=2114");
+        /*Promise.all([estacio, baptista]).then((values) => {
+            //document.getElementById("Propers").innerHTML = "values";
+            console.log(values)
+        });*/
+    </script>
+
+</body>
+</html>
